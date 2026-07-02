@@ -1,0 +1,20 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/raw/**",
+        "function": "serveRawPaste"
+      },
+      {
+        "source": "/view/**",
+        "rewrite": "/index.html"
+      }
+    ]
+  }
+}
